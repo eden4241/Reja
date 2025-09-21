@@ -145,6 +145,13 @@
   width: 75px;
   height: 25px;
   background-color: #ffb400;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: #767676;
 }
 
 .main_frame .left_frame .left_2 .left_2_info p {
@@ -154,6 +161,12 @@
   line-height: 22px;
   color: #2b2b2b;
   font-size: 16px;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: #767676;
 }
 
 .main_frame .left_frame .left_2 .left_2_info .freelance {
@@ -218,7 +231,7 @@
   width: 100%;
   border: 2px solid #ffb400;
   border-radius: 20px;
-  padding: 3px;
+  padding: 2px;
 }
 
 .left_info_margin .margin_line_1 {
@@ -269,6 +282,17 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.main_frame .left_frame .left_4 .left_4_info span, p{
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: #767676;
+}
+
+
 
 .left_info_margin .margin_line_4_1 {
   width: 90%;
