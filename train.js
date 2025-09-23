@@ -1,4 +1,4 @@
-console.log("Jack Maa maslahatlari");
+//console.log("Jack Maa maslahatlari");
 const list = [
     "be a good student",  //0-20
     "choose right boss and do more mistakes", //20-30
@@ -34,21 +34,21 @@ const list = [
 
 
 //async functions
-async function maslahatBering( a) {
-    if(typeof a !== 'number' ) throw new Error("insert a number", null);
-    else if( a <= 20 ) return list[0];
-    else if( a > 20 && a <= 30) return list[1];
-    else if( a > 30 && a <= 40) return list[2];
-    else if( a > 40 && a <= 50) return list[3];
-    else if( a > 50 && a <= 60) return list[4];
-    else { 
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(list[5]);
-            }, 5000);
-        });
-    }
-}
+// async function maslahatBering( a) {
+//     if(typeof a !== 'number' ) throw new Error("insert a number", null);
+//     else if( a <= 20 ) return list[0];
+//     else if( a > 20 && a <= 30) return list[1];
+//     else if( a > 30 && a <= 40) return list[2];
+//     else if( a > 40 && a <= 50) return list[3];
+//     else if( a > 50 && a <= 60) return list[4];
+//     else { 
+//         return new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//                 resolve(list[5]);
+//             }, 5000);
+//         });
+//     }
+// }
 
 
 // call viathen\catch
@@ -71,3 +71,39 @@ async function maslahatBering( a) {
 //     console.log(javob);
 // }
 // run();
+
+
+
+//TASK
+// TASK A
+
+// Harf sifatida kiritilgan birinchi parametr, 
+// kiritilgan ikkinchi parametr tarkibida nechta ekanligini qaytaruvchi
+// Funktsiya tuzing
+
+// Masalan: countLetter("e", "engineer")
+// 'engineer' so'zi tarkibida 'e' harfi 3 marotaba takrorlanganligi uchun
+// 3 sonini qaytaradi
+
+//Yechim
+function countLetter(letter, text) {
+    let count = 0;
+    for (let i = 0; i < text.length; i++) {
+        if (text[i] === letter) {
+            count++;
+        }
+    }
+    return count;
+}
+
+
+console.log("answer:", countLetter("a", "mehanizatsiyalashtirolmayatkanimizdandurda"));
+console.log("answer:", countLetter("b", "boburbogi"));
+
+console.log("=========")
+
+function countLetter(letter, text) {
+    return text.split(letter).length - 1;
+}
+
+console.log("answer:", countLetter("e", "Chelsea"));
