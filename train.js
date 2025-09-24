@@ -76,7 +76,7 @@ const list = [
 
 //TASK
 // TASK A
-
+       //MASALANI IZOHI
 // Harf sifatida kiritilgan birinchi parametr, 
 // kiritilgan ikkinchi parametr tarkibida nechta ekanligini qaytaruvchi
 // Funktsiya tuzing
@@ -85,25 +85,44 @@ const list = [
 // 'engineer' so'zi tarkibida 'e' harfi 3 marotaba takrorlanganligi uchun
 // 3 sonini qaytaradi
 
-//Yechim
-function countLetter(letter, text) {
+     //MASALANI YECHIMI
+// function countLetter(letter, text) {
+//     let count = 0;
+//     for (let i = 0; i < text.length; i++) {
+//         if (text[i] === letter) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+
+
+// console.log("answer:", countLetter("a", "mehanizatsiyalashtirolmayatkanimizdandurda"));
+// console.log("answer:", countLetter("b", "boburbogi"));
+
+// console.log("=========")
+
+// function countLetter(letter, text) {
+//     return text.split(letter).length - 1;
+// }
+
+// console.log("answer:", countLetter("e", "Chelsea"));
+
+
+// TASK - B 
+        //MASALANI IZOHI
+// Shunday, function tuzingki, bu function yagona parametrga ega bo'lib
+// string tarkibidagi sonlar miqdorini qaytarsin
+
+       //MASALANI YECHIMI
+
+function countNumbers(text) {
     let count = 0;
-    for (let i = 0; i < text.length; i++) {
-        if (text[i] === letter) {
-            count++;
-        }
+    for (i=0; i<text.length; i++) {
+        if(text[i]>='0' && text[i]<='9')
+            count++
     }
     return count;
-}
+}       
 
-
-console.log("answer:", countLetter("a", "mehanizatsiyalashtirolmayatkanimizdandurda"));
-console.log("answer:", countLetter("b", "boburbogi"));
-
-console.log("=========")
-
-function countLetter(letter, text) {
-    return text.split(letter).length - 1;
-}
-
-console.log("answer:", countLetter("e", "Chelsea"));
+console.log(countNumbers("jbwq23dkskj2330982"));
