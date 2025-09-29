@@ -1,12 +1,12 @@
 //console.log("Jack Maa maslahatlari");
-const list = [
-    "be a good student",  //0-20
-    "choose right boss and do more mistakes", //20-30
-    "work for yourself", //30-40
-    "do what you good at", //40-50
-    "invest for young generation", //50-60
-    "now just rest",  //60->
-];
+// const list = [
+//     "be a good student",  //0-20
+//     "choose right boss and do more mistakes", //20-30
+//     "work for yourself", //30-40
+//     "do what you good at", //40-50
+//     "invest for young generation", //50-60
+//     "now just rest",  //60->
+// ];
 // Callback functions
 // function maslahatBering( a, callback) {
 //     if(typeof a !== 'number' ) callback("insert a number", null);
@@ -116,13 +116,92 @@ const list = [
 
        //MASALANI YECHIMI
 
-function countNumbers(text) {
-    let count = 0;
-    for (i=0; i<text.length; i++) {
-        if(text[i]>='0' && text[i]<='9')
-            count++
-    }
-    return count;
-}       
+// function countNumbers(text) {
+//     let count = 0;
+//     for (i=0; i<text.length; i++) {
+//         if(text[i]>='0' && text[i]<='9')
+//             count++
+//     }
+//     return count;
+// }       
 
-console.log(countNumbers("jbwq23dkskj2330982"));
+// console.log(countNumbers("jbwq23dkskj2330982"));  
+
+
+/* TASK-C
+
+Shop nomli class tuzing, va bu class 3 xill parametr qabul qilsin.
+Hamda classning quyidagdek 3'ta metodi bo'lsin:
+
+1) qoldiq
+2) sotish
+3) qabul
+
+Har bir metod ishga tushgan vaqtda log qilinsin
+
+MASALAN:
+const shop = new Shop(4, 5, 2)
+
+shop.qoldiq();
+natija qaytishi kerak: Hozir 20: 40'da 4'ta non, 5'ta lag'mon va 2'ta cola mavjud
+
+shop.sotish("non", 3); & shop.qabul("cola", 4); & shop.qoldiq();
+Natija qaytishi kerak: Hozir 20:50da 1ta non, 5ta lag'mon va 6ta cola mavjud!
+*/
+
+class Shop{
+    //state
+    bread;
+    cola;
+    rice;
+
+    //constructor
+  constructor(bread, cola, rice,) {
+    this.bread = bread;
+    this.cola =cola;
+    this.rice = rice;
+    this.time = { hour: 20, minute: 40 };
+  }
+
+    //methods
+    updateTime() {
+        this.time.minute += 5;
+        if (this.time.minute >= 60) {
+          this.time.minute -= 60;
+          this.time.hour++;
+        }
+      }
+
+    qoldiq () {
+        console.log(`Hozir ${this.time.hour}:${this.time.minute.toString().padStart(2, "0")} da ${this.bread} ta non, ${this.cola} ta cola va ${this.rice} kg guruch mavjud`);
+    }
+
+    sotish(bread, cola, rice) {
+        this.bread -= bread;
+        this.cola -= cola;
+        this.rice -= rice;
+        this.updateTime();
+    }
+
+    qabul(bread, cola, rice) {
+        this.bread += bread;
+        this.cola += cola;
+        this.rice += rice;
+        this.updateTime();
+    }
+
+}
+
+const myShop = new Shop(40, 50, 20);
+myShop.qoldiq();
+
+console.log("=======");
+
+myShop.sotish(15, 25, 5);
+myShop.qoldiq();
+
+console.log("=======");
+
+myShop.qabul(20, 30, 50);
+myShop.qoldiq();
+
