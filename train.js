@@ -149,59 +149,97 @@ shop.sotish("non", 3); & shop.qabul("cola", 4); & shop.qoldiq();
 Natija qaytishi kerak: Hozir 20:50da 1ta non, 5ta lag'mon va 6ta cola mavjud!
 */
 
-class Shop{
-    //state
-    bread;
-    cola;
-    rice;
+// class Shop{
+//     //state
+//     bread;
+//     cola;
+//     rice;
 
-    //constructor
-  constructor(bread, cola, rice,) {
-    this.bread = bread;
-    this.cola =cola;
-    this.rice = rice;
-    this.time = { hour: 20, minute: 40 };
-  }
+//     //constructor
+//   constructor(bread, cola, rice,) {
+//     this.bread = bread;
+//     this.cola =cola;
+//     this.rice = rice;
+//     this.time = { hour: 20, minute: 40 };
+//   }
 
-    //methods
-    updateTime() {
-        this.time.minute += 5;
-        if (this.time.minute >= 60) {
-          this.time.minute -= 60;
-          this.time.hour++;
-        }
-      }
+//     //methods
+//     updateTime() {
+//         this.time.minute += 5;
+//         if (this.time.minute >= 60) {
+//           this.time.minute -= 60;
+//           this.time.hour++;
+//         }
+//       }
 
-    qoldiq () {
-        console.log(`Hozir ${this.time.hour}:${this.time.minute.toString().padStart(2, "0")} da ${this.bread} ta non, ${this.cola} ta cola va ${this.rice} kg guruch mavjud`);
-    }
+//     qoldiq () {
+//         console.log(`Hozir ${this.time.hour}:${this.time.minute.toString().padStart(2, "0")} da ${this.bread} ta non, ${this.cola} ta cola va ${this.rice} kg guruch mavjud`);
+//     }
 
-    sotish(bread, cola, rice) {
-        this.bread -= bread;
-        this.cola -= cola;
-        this.rice -= rice;
-        this.updateTime();
-    }
+//     sotish(bread, cola, rice) {
+//         this.bread -= bread;
+//         this.cola -= cola;
+//         this.rice -= rice;
+//         this.updateTime();
+//     }
 
-    qabul(bread, cola, rice) {
-        this.bread += bread;
-        this.cola += cola;
-        this.rice += rice;
-        this.updateTime();
-    }
+//     qabul(bread, cola, rice) {
+//         this.bread += bread;
+//         this.cola += cola;
+//         this.rice += rice;
+//         this.updateTime();
+//     }
 
+// }
+
+// const myShop = new Shop(40, 50, 20);
+// myShop.qoldiq();
+
+// console.log("=======");
+
+// myShop.sotish(15, 25, 5);
+// myShop.qoldiq();
+
+// console.log("=======");
+
+// myShop.qabul(20, 30, 50);
+// myShop.qoldiq();
+
+
+/*
+TASK-D:
+
+Ikkita parametra ega function tuzing, va functioning
+berilgan birinchi va ikkinchi parametr qiymatlari o'zaro to'liq
+mos kelsa true qiymat qaytarsin
+
+Masalan: checkContent("mitgroup", "gmtiprou");
+Yuqoridagi misolda birinchi va ikkinchi parametr qiymatli bir xil
+ya'ni bir xil harflar qatnashganligi uchun true qiymat qaytaradi.
+*/
+
+function checkContent(a, b) {
+let text1 = a.split("");
+let text2 = b.split("");
+
+console.log(text1);
+console.log(text2);
+
+text1.sort();
+console.log(text1);
+
+text2.sort();
+console.log(text2);
+
+if(text1.join("") === text2.join("")) {
+  console.log(true);
+} else {
+  console.log(false);
+}
 }
 
-const myShop = new Shop(40, 50, 20);
-myShop.qoldiq();
 
-console.log("=======");
-
-myShop.sotish(15, 25, 5);
-myShop.qoldiq();
-
-console.log("=======");
-
-myShop.qabul(20, 30, 50);
-myShop.qoldiq();
+checkContent("eden", "eend");
+console.log("-----")
+checkContent("gool", "gol");
 
