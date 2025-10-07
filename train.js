@@ -15,7 +15,7 @@
 //     else if( a > 30 && a <= 40) callback(null, list[2]);
 //     else if( a > 40 && a <= 50) callback(null, list[3]);
 //     else if( a > 50 && a <= 60) callback(null, list[4]);
-//     else { 
+//     else {
 //         setTimeout(function () {
 //         callback(null, list[5]);
 //         }, 5000);
@@ -32,7 +32,6 @@
 
 // console.log("passed here 1");
 
-
 //async functions
 // async function maslahatBering( a) {
 //     if(typeof a !== 'number' ) throw new Error("insert a number", null);
@@ -41,7 +40,7 @@
 //     else if( a > 30 && a <= 40) return list[2];
 //     else if( a > 40 && a <= 50) return list[3];
 //     else if( a > 50 && a <= 60) return list[4];
-//     else { 
+//     else {
 //         return new Promise((resolve, reject) => {
 //             setTimeout(() => {
 //                 resolve(list[5]);
@@ -49,7 +48,6 @@
 //         });
 //     }
 // }
-
 
 // call viathen\catch
 // console.log("passed here 0");
@@ -59,7 +57,6 @@
 //     console.log("ERROR:", err);
 // });
 // console.log("passed here 1");
-
 
 // cal via asyn/await
 // async function run() {
@@ -72,12 +69,10 @@
 // }
 // run();
 
-
-
 //TASK
 // TASK A
-       //MASALANI IZOHI
-// Harf sifatida kiritilgan birinchi parametr, 
+//MASALANI IZOHI
+// Harf sifatida kiritilgan birinchi parametr,
 // kiritilgan ikkinchi parametr tarkibida nechta ekanligini qaytaruvchi
 // Funktsiya tuzing
 
@@ -85,7 +80,7 @@
 // 'engineer' so'zi tarkibida 'e' harfi 3 marotaba takrorlanganligi uchun
 // 3 sonini qaytaradi
 
-     //MASALANI YECHIMI
+//MASALANI YECHIMI
 // function countLetter(letter, text) {
 //     let count = 0;
 //     for (let i = 0; i < text.length; i++) {
@@ -96,25 +91,25 @@
 //     return count;
 // }
 
-
 // console.log("answer:", countLetter("a", "mehanizatsiyalashtirolmayatkanimizdandurda"));
 // console.log("answer:", countLetter("b", "boburbogi"));
 
 // console.log("=========")
 
-// function countLetter(letter, text) {
-//     return text.split(letter).length - 1;
+// // 2-usul
+// function countLetter(letter, text1) {
+//        // console.log(text1.split(letter));
+//     return text1.split(letter).length - 1;
 // }
 
 // console.log("answer:", countLetter("e", "Chelsea"));
 
-
-// TASK - B 
-        //MASALANI IZOHI
+// TASK - B
+//MASALANI IZOHI
 // Shunday, function tuzingki, bu function yagona parametrga ega bo'lib
 // string tarkibidagi sonlar miqdorini qaytarsin
 
-       //MASALANI YECHIMI
+//MASALANI YECHIMI
 
 // function countNumbers(text) {
 //     let count = 0;
@@ -123,10 +118,9 @@
 //             count++
 //     }
 //     return count;
-// }       
+// }
 
-// console.log(countNumbers("jbwq23dkskj2330982"));  
-
+// console.log(countNumbers("jbwq23dkskj2330982"));
 
 /* TASK-C
 
@@ -149,62 +143,63 @@ shop.sotish("non", 3); & shop.qabul("cola", 4); & shop.qoldiq();
 Natija qaytishi kerak: Hozir 20:50da 1ta non, 5ta lag'mon va 6ta cola mavjud!
 */
 
-// class Shop{
-//     //state
-//     bread;
-//     cola;
-//     rice;
+/*
+class Shop{
+    //state
+    bread;
+    cola;
+    rice;
 
-//     //constructor
-//   constructor(bread, cola, rice,) {
-//     this.bread = bread;
-//     this.cola =cola;
-//     this.rice = rice;
-//     this.time = { hour: 20, minute: 40 };
-//   }
+    //constructor
+  constructor(bread, cola, rice,) {
+    this.bread = bread;
+    this.cola =cola;
+    this.rice = rice;
+    this.time = { hour: 20, minute: 56 };
+  }
 
-//     //methods
-//     updateTime() {
-//         this.time.minute += 5;
-//         if (this.time.minute >= 60) {
-//           this.time.minute -= 60;
-//           this.time.hour++;
-//         }
-//       }
+    //methods
+    updateTime() {
+        this.time.minute += 5;
+        if (this.time.minute >= 60) {
+          this.time.minute -= 60;
+          this.time.hour++;
+        }
+      }
 
-//     qoldiq () {
-//         console.log(`Hozir ${this.time.hour}:${this.time.minute.toString().padStart(2, "0")} da ${this.bread} ta non, ${this.cola} ta cola va ${this.rice} kg guruch mavjud`);
-//     }
+    qoldiq () {
+        console.log(`Hozir ${this.time.hour}:${this.time.minute.toString().padStart(2, "0")} da ${this.bread} ta non, ${this.cola} ta cola va ${this.rice} kg guruch mavjud`);
+    }
 
-//     sotish(bread, cola, rice) {
-//         this.bread -= bread;
-//         this.cola -= cola;
-//         this.rice -= rice;
-//         this.updateTime();
-//     }
+    sotish(bread, cola, rice) {
+        this.bread -= bread;
+        this.cola -= cola;
+        this.rice -= rice;
+        this.updateTime();
+    }
 
-//     qabul(bread, cola, rice) {
-//         this.bread += bread;
-//         this.cola += cola;
-//         this.rice += rice;
-//         this.updateTime();
-//     }
+    qabul(bread, cola, rice) {
+        this.bread += bread;
+        this.cola += cola;
+        this.rice += rice;
+        this.updateTime();
+    }
 
-// }
+}
 
-// const myShop = new Shop(40, 50, 20);
-// myShop.qoldiq();
+const myShop = new Shop(40, 50, 20);
+myShop.qoldiq();
 
-// console.log("=======");
+console.log("=======");
 
-// myShop.sotish(15, 25, 5);
-// myShop.qoldiq();
+myShop.sotish(15, 25, 5);
+myShop.qoldiq();
 
-// console.log("=======");
+console.log("=======");
 
-// myShop.qabul(20, 30, 50);
-// myShop.qoldiq();
-
+myShop.qabul(20, 30, 50);
+myShop.qoldiq();
+*/
 
 /*
 TASK-D:
@@ -218,28 +213,70 @@ Yuqoridagi misolda birinchi va ikkinchi parametr qiymatli bir xil
 ya'ni bir xil harflar qatnashganligi uchun true qiymat qaytaradi.
 */
 
-function checkContent(a, b) {
-let text1 = a.split("");
-let text2 = b.split("");
+// function checkContent(a, b) {
+// let text1 = a.split("");
+// let text2 = b.split("");
 
-console.log(text1);
-console.log(text2);
+// console.log(text1);
+// console.log(text2);
 
-text1.sort();
-console.log(text1);
+// text1.sort();
+// console.log(text1);
 
-text2.sort();
-console.log(text2);
+// text2.sort();
+// console.log(text2);
 
-if(text1.join("") === text2.join("")) {
-  console.log(true);
-} else {
-  console.log(false);
+// if(text1.join("") === text2.join("")) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+// }
+
+// checkContent("eden", "eend");
+// console.log("-----")
+// checkContent("gool", "gol");
+
+/*
+TASK-E: 
+
+Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+MASALAN: getReverse("hello") return qilsin "olleh"
+*/
+
+// function getReverse(text) {
+//  let myText = text.split("");
+//  console.log(myText);
+
+//  myText.reverse();
+//  console.log(myText);
+
+//  const result = myText.join("");
+//  console.log(result);
+// }
+// getReverse("My name is EDEN");
+
+/*
+TASK-F
+
+Yagona string argumentga ega findDoublers nomli function tuzing
+Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
+true yokida false natija qaytarsin.
+
+MASALAN: findDoublers("hello"); natija true qaytadi. Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
+*/
+
+function findDoublers(text) {
+  console.log(text);
+  let myText = text.split("").sort();
+  console.log(myText);
+  let letters = [];
+  for (let i = 0; i < myText.length; i++) {
+    if (letters.includes(myText[i])) {
+      return true;
+    } letters.push(myText[i]);
+  }
+  return false;
 }
-}
 
-
-checkContent("eden", "eend");
-console.log("-----")
-checkContent("gool", "gol");
-
+console.log(findDoublers("eden"));
